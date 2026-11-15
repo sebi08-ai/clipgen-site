@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClipGen</title>
+<meta name="description" content="ClipGen is a private desktop tool that prepares vertical gaming highlight videos and uploads them to the operator's own YouTube and TikTok accounts.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <nav><a href="index.html">ClipGen</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></nav>
+  <h1>ClipGen</h1>
+  <p class="muted">A private content tool for gaming highlight channels · Deutsch weiter unten</p>
+
+  <h2>What it does</h2>
+  <p>ClipGen runs locally on its operator's own computer. It finds highlight moments from public game streams whose
+  creators allow clipping, edits them into vertical 9:16 videos with captions, and shows them in a local dashboard.
+  Nothing is published automatically: the operator reviews and approves every video.</p>
+  <p>After approval, ClipGen can upload the video to the operator's <b>own</b> accounts:</p>
+  <ul>
+    <li><b>YouTube</b> via the YouTube Data API (<code>youtube.upload</code>, <code>youtube.readonly</code> to show the connected channel name).</li>
+    <li><b>TikTok</b> via the Content Posting API as a <b>draft in the operator's TikTok inbox</b> (<code>video.upload</code>, <code>user.info.basic</code>). The operator finishes and posts the draft in the TikTok app.</li>
+  </ul>
+  <p>ClipGen is not a public service. It has no user sign-up, and it only accesses the accounts that its operator connects.</p>
+
+  <h2>Deutsch</h2>
+  <p>ClipGen ist ein privates Werkzeug, das lokal auf dem PC des Betreibers läuft. Es bereitet Highlight-Clips aus
+  Spiele-Streams (nur von Creatorn, die Clips erlauben) als Hochkant-Videos auf. Nach manueller Freigabe lädt es sie auf die
+  <b>eigenen</b> YouTube-Kanäle des Betreibers hoch bzw. legt sie als Entwurf im <b>eigenen</b> TikTok-Postfach ab.</p>
+
+  <p class="muted"><a href="privacy.html">Privacy Policy / Datenschutz</a> · <a href="terms.html">Terms of Service / Nutzungsbedingungen</a></p>
+</main>
+</body>
+</html>

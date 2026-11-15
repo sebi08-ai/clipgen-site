@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClipGen Login</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Signing in…</h1>
+  <p id="msg" class="muted">You are being sent back to ClipGen on this computer.</p>
+</main>
+<script>
+// TikTok only accepts HTTPS redirect addresses. This page forwards the sign-in result to the ClipGen
+// dashboard running on this computer (http://localhost:<port>). The port is part of "state" (channel.port.random).
+(function () {
+  var params = new URLSearchParams(location.search);
+  var state = params.get("state") || "";
+  var port = (state.split(".")[1] || "8765");
+  if (!/^\d{2,5}$/.test(port)) port = "8765";
+  var target = "http://localhost:" + port + "/oauth/tiktok/callback" + location.search;
+  document.getElementById("msg").innerHTML =
+    'If nothing happens, make sure ClipGen is running and <a href="' + target.replace(/"/g, "&quot;") + '">click here</a>.';
+  location.replace(target);
+})();
+</script>
+</body>
+</html>
